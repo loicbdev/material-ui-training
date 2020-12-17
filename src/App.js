@@ -15,17 +15,6 @@ align-items: center;
 padding: 5rem;
 `;
 
-const styles = {
-  myLeftButton: {
-    backgroundColor: "blue",
-    margin: "1rem"
-  },
-  myRightButton: {
-    backgroundColor: "green",
-    margin: "1rem"
-  }
-}
-
 const theme = createMuiTheme({
   palette: {
     primary: blue,
@@ -45,13 +34,24 @@ const theme = createMuiTheme({
   }
   })
 
+const styles = {
+  myLeftButton: {
+    backgroundColor: "blue",
+    margin: "1rem"
+  },
+  myRightButton: {
+    backgroundColor: "orange",
+    margin: "1rem"
+  }
+}  
+
 class App extends Component {
   render() {
     return ( 
       <MuiThemeProvider theme={ theme }>
         <DIV className = "App">
           <Button className={this.props.classes.myLeftButton}>Coucou</Button>
-          <Button className={this.props.classes.myRightButton}>les gens !</Button>
+          <Button color="secondary">les gens !</Button>
         </DIV>
       </MuiThemeProvider>
     );
