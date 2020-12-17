@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // ou import Button from '@material-ui/core/Button';
 import { Button } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
+import { blue, green } from '@material-ui/core/colors';
 
 
 const DIV = styled.div `
@@ -18,12 +18,18 @@ padding: 5rem;
 const styles = {
   myLeftButton: {
     backgroundColor: "blue",
+    margin: "1rem"
+  },
+  myRightButton: {
+    backgroundColor: "green",
+    margin: "1rem"
   }
 }
 
 const theme = createMuiTheme({
   palette: {
-    primary: blue
+    primary: blue,
+    secondary: green
   },
   typography: {
     fontSize: 20,
@@ -45,7 +51,7 @@ class App extends Component {
       <MuiThemeProvider theme={ theme }>
         <DIV className = "App">
           <Button className={this.props.classes.myLeftButton}>Coucou</Button>
-          <Button>les gens !</Button>
+          <Button className={this.props.classes.myRightButton}>les gens !</Button>
         </DIV>
       </MuiThemeProvider>
     );
