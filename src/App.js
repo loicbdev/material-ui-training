@@ -1,5 +1,6 @@
 // source : https://www.youtube.com/watch?v=D3tB_DGgICE&feature=youtu.be
-
+import Navigation from './components/Navigation';
+import Signin from './components/SignIn';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 // ou import Button from '@material-ui/core/Button';
@@ -50,6 +51,8 @@ class App extends Component {
     return ( 
       <MuiThemeProvider theme={ theme }>
         <DIV className = "App">
+          <Navigation />
+          <Signin />
           <Button className={this.props.classes.myLeftButton}>Coucou</Button>
           <Button color="secondary">les gens !</Button>
         </DIV>
